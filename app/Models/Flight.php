@@ -7,16 +7,24 @@ use Illuminate\Database\Eloquent\Model;
 class Flight extends Model
 {
 
-    protected $table = "flight";
+    protected $table = "flights";
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    
+    protected $primaryKey = "flights_id";
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        
+        'flight_name',
+        'origin',
+        'destination',
+        'date_hour',
+        'passengers_quantity',
+        'boarding_gate',
+        'flight_state_id',
+        'plane_routes_id'
     ];
 
 }

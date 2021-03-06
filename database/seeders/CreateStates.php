@@ -18,11 +18,14 @@ class CreateStates extends Seeder
         \App\Models\FlightState::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-
-        DB::table('flight_state')->insert(['id'=> 1, 'state' => 'delayed']);
-        DB::table('flight_state')->insert(['id'=> 2, 'state' => 'boarding']);
-        DB::table('flight_state')->insert(['id'=> 3, 'state' => 'cancelled']);
-        DB::table('flight_state')->insert(['id'=> 4, 'state' => 'on-time']);
-        DB::table('flight_state')->insert(['id'=> 5, 'state' => 'in-flight']);
+        DB::table('fligths_states')->insert([
+        	'flight_state_id'=> 1, 
+        	'current_state' => 'delayed']);
+        DB::table('fligths_states')->insert([
+        	'flight_state_id'=> 2,
+        	'current_state' => 'boarding']);
+        DB::table('fligths_states')->insert(['flight_state_id'=> 3, 'current_state' => 'cancelled']);
+        DB::table('fligths_states')->insert(['flight_state_id'=> 4, 'current_state' => 'on-time']);
+        DB::table('fligths_states')->insert(['flight_state_id'=> 5, 'current_state' => 'in-flight']);
     }
 }

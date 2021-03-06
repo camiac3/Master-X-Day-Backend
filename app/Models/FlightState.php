@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class FlightState extends Model
 {
 
-    protected $table = "flight_state";
+    protected $table = "fligths_states";
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'state',
+        'current_state',
     ];
     
 }

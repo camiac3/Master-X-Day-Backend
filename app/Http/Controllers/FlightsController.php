@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
-// use App\Models\User;
+use App\Models\Flight;
 
 class FlightsController extends Controller
 {
@@ -23,7 +23,9 @@ class FlightsController extends Controller
         */
     public function index()
     {
-        //
+        $flights = Flight::all();
+        return $flights;
+
     }
 
     /**
@@ -54,7 +56,8 @@ class FlightsController extends Controller
         */
     public function show($id)
     {
-        //
+        $flight = Flight::find($id);
+        return $flight;
     }
 
     /**
@@ -87,7 +90,9 @@ class FlightsController extends Controller
         */
     public function destroy($id)
     {
-        //
+        $flight = Flight::find($id);
+        $flight->delete();
+        return $flight;
     }
 
 }

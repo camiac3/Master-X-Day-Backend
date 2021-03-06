@@ -12,7 +12,7 @@ class CreatePassengers extends Seeder
     /**
      * Run the database seeds.
      *
-     * @return void
+     * @return vopassenger_id
      */
     public function run()
     {
@@ -23,301 +23,301 @@ class CreatePassengers extends Seeder
 
 
         DB::table('passenger')->insert([
-            'id'=> 1, 
+            'passenger_id'=> 1, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 2, 
+            'passenger_id'=> 2, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 3, 
+            'passenger_id'=> 3, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 4, 
+            'passenger_id'=> 4, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 5, 
+            'passenger_id'=> 5, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 6, 
+            'passenger_id'=> 6, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 7, 
+            'passenger_id'=> 7, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 8, 
+            'passenger_id'=> 8, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 9, 
+            'passenger_id'=> 9, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 10, 
+            'passenger_id'=> 10, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 11, 
+            'passenger_id'=> 11, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 12, 
+            'passenger_id'=> 12, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 13, 
+            'passenger_id'=> 13, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 14, 
+            'passenger_id'=> 14, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 15, 
+            'passenger_id'=> 15, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 16, 
+            'passenger_id'=> 16, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 17, 
+            'passenger_id'=> 17, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 18, 
+            'passenger_id'=> 18, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 19, 
+            'passenger_id'=> 19, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 20, 
+            'passenger_id'=> 20, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 21, 
+            'passenger_id'=> 21, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 22, 
+            'passenger_id'=> 22, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 23, 
+            'passenger_id'=> 23, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 24, 
+            'passenger_id'=> 24, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 25, 
+            'passenger_id'=> 25, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 26, 
+            'passenger_id'=> 26, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 27, 
+            'passenger_id'=> 27, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 28, 
+            'passenger_id'=> 28, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 29, 
+            'passenger_id'=> 29, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 30, 
+            'passenger_id'=> 30, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 31, 
+            'passenger_id'=> 31, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 32, 
+            'passenger_id'=> 32, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 33, 
+            'passenger_id'=> 33, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 34, 
+            'passenger_id'=> 34, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 35, 
+            'passenger_id'=> 35, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 36, 
+            'passenger_id'=> 36, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 37, 
+            'passenger_id'=> 37, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 38, 
+            'passenger_id'=> 38, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 39, 
+            'passenger_id'=> 39, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 40, 
+            'passenger_id'=> 40, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 41, 
+            'passenger_id'=> 41, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 42, 
+            'passenger_id'=> 42, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 43, 
+            'passenger_id'=> 43, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 44, 
+            'passenger_id'=> 44, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 45, 
+            'passenger_id'=> 45, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 46, 
+            'passenger_id'=> 46, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 47, 
+            'passenger_id'=> 47, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 48, 
+            'passenger_id'=> 48, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 49, 
+            'passenger_id'=> 49, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
         ]);
         DB::table('passenger')->insert([
-            'id'=> 50, 
+            'passenger_id'=> 50, 
             'full_name' => $this->randomName(),
             'email' => Str::random(10)."@gmail.com",
             'phone' => mt_rand(1000000000, 9999999999),
@@ -350,7 +350,7 @@ class CreatePassengers extends Seeder
         'Sharie',
         'Blythe',
         'Gaylene',
-        'Elida',
+        'Elpassenger_ida',
         'Randy',
         'Margarete',
         'Margarett',
