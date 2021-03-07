@@ -13,11 +13,6 @@ use App\Models\FlighRoutes;
 
 class FlightsController extends Controller
 {
-    public function getAll()
-    {
-        $vuelos = array('hola' => "primerVuelo", "este" => "Prueba...");
-        return $vuelos;
-    }
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +21,7 @@ class FlightsController extends Controller
     public function index()
     {
         $flights=Flight::orderBy('flights_id','DESC')->paginate(25);
-        return view('Flight.index',compact('flights')); 
+        return view('flight.index',compact('flights')); 
     }
 
     /**
@@ -36,7 +31,7 @@ class FlightsController extends Controller
      */
     public function create()
     {
-        return view('Flight.create');
+        return view('flight.create');
     }
 
     /**
