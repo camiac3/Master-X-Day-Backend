@@ -35,12 +35,16 @@ class FlightsController extends Controller
     public function create()
     {
         #I consume the API
+        # Airport
         $request = Http::get('https://ads.humancode.com.co/api/airports');
-
         $airports = $request->json();
         
+        # Planes   http://localhost/Master-X-Day-Backend/public/flights/create
+        $request = Http::get('https://ads.humancode.com.co/api/planes');
+        $planes = $request->json();
+
         // dd($response);
-        return view('flight.create', ['airports' => $airports]);
+        return view('flight.create', ['airports' => $airports, 'planes' => $planes]);
     }
 
     /**
@@ -59,13 +63,13 @@ class FlightsController extends Controller
         */
     public function store(Request $request)
     {
-        // dd($request->all());
-
         # Save the route first
         $route = new Route ;
-        $route->aeropuerto_id_origen = $request->origin_id;
-        $route->aeropuerto_id_destino = $request->detination_id; 
+        $route->aeropuerto_id_origen = $request->origin;
+        $route->aeropuerto_id_destino = $request->destination; 
         $route->save();
+
+        $route = route::find($route->plane_routes_id);
 
         // dd($route);
 
@@ -77,21 +81,21 @@ class FlightsController extends Controller
         $flighRoutes->save();
 
         # 
-        $flight_name = $flighRoutes->plane_routes_id .  " " . $route->getAirportOrigin->airpot_name . " to ". $route->getAirportDestination->airpot_name;
+        $flight_name = $flighRoutes->plane_routes_id .  " " . $route->getAirportOrigin->airport_name . " to ". $route->getAirportDestination->airport_name;
         # Save Flight 
         $flight = new Flight;
         $flight->flight_name = $flight_name;
-        $flight->origin = $route->getAirportOrigin->airpot_name;
-        $flight->destination = $route->getAirportDestination->airpot_name;
-        $flight->date_hour = time();
+        $flight->origin = $route->getAirportOrigin->airport_name;
+        $flight->destination = $route->getAirportDestination->airport_name;
+        $flight->date_hour = strtotime( $request->date_hour) ;
         $flight->passengers_quantity = $request->passengers_quantity;
         $flight->boarding_gate = $request->boarding_gate;
-        $flight->flight_state_id = $request->flight_state_id;
+        $flight->flight_state_id = 4;
         $flight->plane_routes_id = $flighRoutes->plane_routes_id; 
         $flight->save();
 
         ### Falta incluir los pasageros como tal 
-        return $flight;
+        return redirect()->route('flights.index');
 
         # save Flight with passengers
         # 
@@ -118,7 +122,13 @@ class FlightsController extends Controller
     public function edit($id)
     {
         $flight=Flight::find($id);
-        return view('flight.edit',compact('flight'));
+        $request = Http::get('https://ads.humancode.com.co/api/airports');
+        $airports = $request->json();
+        
+        # Planes   http://localhost/Master-X-Day-Backend/public/flights/create
+        $request = Http::get('https://ads.humancode.com.co/api/planes');
+        $planes = $request->json();
+        return view('flight.edit', ['flight'=> $flight,  'airports' => $airports, 'planes' => $planes]);
     }
 
     /**

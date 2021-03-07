@@ -9,9 +9,9 @@
                 </div>
                 <div class="panel-body">
                     <div class="table-container">
-                        <form method="POST" action="{{ route('flights.store') }}" role="form">
+                        <form method="POST" action="{{ route('api.flights.store') }}" role="form">
                             {{ csrf_field() }}
-                            <input name="_method" type="hidden" value="PATCH">
+                            {{-- <input name="_method" type="hidden" value="PATCH"> --}}
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="col-xs-4 col-sm-4 col-md-4">
@@ -54,6 +54,17 @@
                                         <div class="form-group">
                                         Number Passangers
                                             <input type="number" name="passangers_quantity" id="passangers_quantity" class="form-control input-sm" placeholder="passangers quantity">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-4">
+                                        <div class="form-group">
+                                            Plane
+                                            <select name="plane_id" id="plane_id" class="form-control input-sm">
+                                                <option value="0">-Select-</option>
+                                                @foreach($planes as $plane)
+                                                    <option value="{{ $plane['plane_id'] }} ">{{ $plane['plane_name'] }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
