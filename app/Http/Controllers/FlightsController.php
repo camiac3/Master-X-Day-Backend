@@ -8,7 +8,9 @@ use Illuminate\Http\RedirectResponse;
 use App\Models\Flight;
 use App\Models\Route;
 use App\Models\FlighRoutes;
+use App\Models\Airport;
 
+use Illuminate\Support\Facades\Http;
 
 
 class FlightsController extends Controller
@@ -21,6 +23,7 @@ class FlightsController extends Controller
     public function index()
     {
         $flights=Flight::orderBy('flights_id','DESC')->paginate(25);
+
         return view('flight.index',compact('flights')); 
     }
 
@@ -31,7 +34,13 @@ class FlightsController extends Controller
      */
     public function create()
     {
-        return view('flight.create');
+        #I consume the API
+        $request = Http::get('https://ads.humancode.com.co/api/airports');
+
+        $airports = $request->json();
+        
+        // dd($response);
+        return view('flight.create', ['airports' => $airports]);
     }
 
     /**

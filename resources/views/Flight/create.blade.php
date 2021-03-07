@@ -24,6 +24,10 @@
                                         <div class="form-group">
                                             Origin
                                             <select name="origin" id="origin" class="form-control input-sm">
+                                                <option value="0">-Select-</option>
+                                                @foreach($airports as $airport)
+                                                    <option value="{{ $airport['id'] }} ">{{ $airport['airport_name'] }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>
@@ -31,6 +35,10 @@
                                         <div class="form-group">
                                             Destination
                                             <select name="destination" id="destination" class="form-control input-sm">
+                                                <option value="0">-Select-</option>
+                                                @foreach($airports as $airport)
+                                                    <option value="{{ $airport['id'] }} ">{{ $airport['airport_name'] }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>

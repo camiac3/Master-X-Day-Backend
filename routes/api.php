@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 use App\Http\Controllers\FlightsController;
+use App\Http\Controllers\AirportController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +25,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::resource('flights', FlightsController::class);
+Route::resource('airports', AirportController::class);
 // Route::get('flights', [FlightsController::class, 'getAll']);
