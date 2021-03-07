@@ -27,4 +27,6 @@ class Flight extends Model
         'plane_routes_id'
     ];
 
+    public $timestamps = false;
+
 }

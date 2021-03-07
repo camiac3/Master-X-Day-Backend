@@ -5,17 +5,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class FlightState extends Model
+class FlighRoutes extends Model
 {
 
-    protected $table = "fligths_states";
+    protected $table = "flights_routes";
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    protected $primaryKey = "plane_routes_id";
+
     protected $fillable = [
-        'current_state',
+		'plane_id',
+		'rutas_idrutas',
     ];
 
     public $timestamps = false;
