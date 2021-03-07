@@ -16,14 +16,14 @@
           <div class="table-container">
             <table id="mytable" class="table table-bordred table-striped">
               <thead>
-                <th>Nombre</th>
-                <th>Resumen</th>
-                <th>No. Páginas</th>
-                <th>Edicion</th>
+                <th>Name</th>
+                <th>Origin</th>
+                <th>destination</th>
+                <th>date_hour</th>
                 <th>Autor</th>
-                <th>Precio</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
+                <th>passengers_quantity</th>
+                <th>Edit</th>
+                <th>Delete</th>
               </thead>
               <tbody>
                 @if($flights->count())
