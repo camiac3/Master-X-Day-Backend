@@ -18,5 +18,6 @@ class Passenger extends Model
         'email',
         'phone',
     ];
-
+    
+    public $timestamps = false;
 }

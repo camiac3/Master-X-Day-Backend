@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Flight;
+use App\Models\Route;
+use App\Models\FlighRoutes;
+
+
 
 class FlightsController extends Controller
 {
@@ -33,19 +37,65 @@ class FlightsController extends Controller
         *
         * @return Response
         */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
         * Store a newly created resource in storage.
+        * The fields it receives are:
+        * 
+        * 
+            origin_id :             Id Airport origin (int)
+            detination_id :         Id Airport Destination (int)
+            plane_id :              Id Plane (int)
+            passengers_quantity :   Passengers quantity (int)
+            boarding_gate :         Date boarding (datetime)
+            flight_state_id :       State id of Flight
         *
         * @return Response
         */
-    public function store()
+    public function store(Request $request)
     {
-        //
+        // dd($request->all());
+
+        # Save the route first
+        $route = new Route ;
+        $route->aeropuerto_id_origen = $request->origin_id;
+        $route->aeropuerto_id_destino = $request->detination_id; 
+        $route->save();
+
+        // dd($route);
+
+
+        # Then save the route with the plane
+        $flighRoutes = new FlighRoutes ;
+        $flighRoutes->plane_id = $request->plane_id;
+        $flighRoutes->rutas_idrutas = $route->plane_routes_id; 
+        $flighRoutes->save();
+
+        # 
+        $flight_name = $flighRoutes->plane_routes_id .  " " . $route->getAirportOrigin->airpot_name . " to ". $route->getAirportDestination->airpot_name;
+        # Save Flight 
+        $flight = new Flight;
+        $flight->flight_name = $flight_name;
+        $flight->origin = $route->getAirportOrigin->airpot_name;
+        $flight->destination = $route->getAirportDestination->airpot_name;
+        $flight->date_hour = time();
+        $flight->passengers_quantity = $request->passengers_quantity;
+        $flight->boarding_gate = $request->boarding_gate;
+        $flight->flight_state_id = $request->flight_state_id;
+        $flight->plane_routes_id = $flighRoutes->plane_routes_id; 
+        $flight->save();
+
+
+        ### Falta incluir los pasageros como tal 
+        return $flight;
+
+
+        # save Flight with passengers
+        # 
     }
 
     /**
